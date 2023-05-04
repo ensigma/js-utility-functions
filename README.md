@@ -2,9 +2,14 @@
 A JavaScript utility function is a modular and reusable function that performs a specific task related to general programming needs. It is designed to simplify complex operations into simple and concise code, and improve code readability and maintainability.
 
 A utility function should: 
-1. Two or fewer arguments  - Limiting the amount of arguments makes testing easier
-2. Do one thing - When a function is isolated to one action, it can be read, refactored, and tested easier.
-3. Say what they do - It is very important for debugging that we know what a function does just by the name. For example, the function name `randomInt`, allows the reader to understand exactly what the function does, it returns a random number. What if the function name was called `random`. Random what? It could be a random object, array, integer, boolean, etc.
+1. Two or fewer arguments  - Limiting the amount of arguments makes testing easier [^1]
+2. Do one thing - When a function is isolated to one action, it can be read, refactored, and tested easier.[^2]
+3. Say what they do - It is very important for debugging that we know what a function does just by the name. For example, the function name `randomInt`, allows the reader to understand exactly what the function does, it returns a random number. What if the function name was called `random`. Random what? It could be a random object, array, integer, boolean, etc.[^3]
+
+[^1]: source: [Clean Code Javascript: Function arguments (2 or fewer ideally)](https://github.com/ryanmcdermott/clean-code-javascript#function-arguments-2-or-fewer-ideally)
+[^2]: source: [Clean Code Javascript: Functions should do one thing](https://github.com/ryanmcdermott/clean-code-javascript#functions-should-do-one-thing)
+[^3]: source: [Function names should say what they do](https://github.com/ryanmcdermott/clean-code-javascript#function-names-should-say-what-they-do)
+
 
 ## How to use utility functions
 Other developers might set them up differently, but I put all my utility functions for a project in one file (usually in `/src/utility/utility.js`). 
@@ -29,6 +34,7 @@ const utilityService = { a, b, c };
 export default utilityService;
 // Don't forget the End of File extra line
 ```
+
 
 ## Array Functions
 
@@ -83,6 +89,7 @@ function intersection(arr1, arr2) {
   return arr1.filter((val) => arr2.includes(val));
 }
 ```
+
 
 ## Object Functions
 
@@ -165,6 +172,7 @@ function deepClone(obj) {
 }
 ```
 
+
 ## String Functions
 
 ### capitalize
@@ -219,6 +227,7 @@ function reverse(str) {
   return str.split('').reverse().join('');
 }
 ```
+
 
 ## Number Functions
 
@@ -304,6 +313,7 @@ function isPrime(num) {
 }
 ```
 
+
 ## Date Functions
 
 ### formatDate
@@ -369,6 +379,7 @@ function dayOfYear(date) {
   return Math.floor(diff / oneDay);
 }
 ```
+
 
 ## Misc Functions
 
@@ -443,6 +454,7 @@ function flat(array) {
 }
 ```
 
+
 ## Accessibility functions
 
 ### addOutlineOnFocus
@@ -462,6 +474,7 @@ function addOutlineOnFocus = (focusElem, parentElem) => {
   });
 };
 ```
+
 
 ## Cookie Functions
 
