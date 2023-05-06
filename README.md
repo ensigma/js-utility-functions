@@ -1,10 +1,10 @@
 ## What is a utility function?
-A JavaScript utility function is a modular and reusable function that performs a specific task related to general programming needs. It is designed to simplify complex operations into simple and concise code, and improve code readability and maintainability.
+A JavaScript utility function is a modular and reusable piece of code that performs a specific task related to general programming needs. It is designed to make complex operations simpler and more concise, as well as to improve code readability and maintainability.
 
 A utility function should: 
-1. Two or fewer arguments  - Limiting the amount of arguments makes testing easier [^1]
-2. Do one thing - When a function is isolated to one action, it can be read, refactored, and tested easier.[^2]
-3. Say what they do - It is very important for debugging that we know what a function does just by the name. For example, the function name `randomInt`, allows the reader to understand exactly what the function does, it returns a random number. What if the function name was called `random`. Random what? It could be a random object, array, integer, boolean, etc.[^3]
+1. Have two or fewer arguments for easier testing [^1]
+2. Do one thing to make it easier to read, refactor, and test.[^2]
+3. Have a name that clearly states what it does. For example, the function name randomInt implies that it returns a random number, instead of random which could mean a random object, array, integer, boolean, etc.[^3]
 
 [^1]: source: [Clean Code Javascript: Function arguments (2 or fewer ideally)](https://github.com/ryanmcdermott/clean-code-javascript#function-arguments-2-or-fewer-ideally)
 [^2]: source: [Clean Code Javascript: Functions should do one thing](https://github.com/ryanmcdermott/clean-code-javascript#functions-should-do-one-thing)
