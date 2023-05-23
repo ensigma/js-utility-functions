@@ -58,7 +58,10 @@ Flattens an array of arrays into a single array.
 
 ```javascript
 function flatten(arr) {
-  return arr.reduce((acc, val) => acc.concat(val), []);
+  return arr.reduce((acc, val) => {
+    Array.isArray(val) ? Array.prototype.push.apply(acc, val) : acc.push(val);
+    return acc;
+  }, []);
 }
 ```
 
