@@ -44,9 +44,11 @@ Splits an array into smaller arrays of a specified size.
 
 ```javascript
 function chunk(arr, size) {
-  return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
-    arr.slice(i * size, i * size + size)
-  );
+  let result = [];
+  for(let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
 }
 ```
 
